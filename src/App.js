@@ -48,7 +48,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <Row className="m-0 main">
-          <Col className="p-0 d-none-sm d-md-block" md="3"><Sidebar stations={this.state.stations} handleClick={this.triggerModal}/></Col>
+          <Col className="p-0" md="3"><Sidebar stations={this.state.stations} handleClick={this.triggerModal}/></Col>
           <Col className="p-0" xs="12" md="9"><Map getCurrentLocation={this.getCurrentLocation} currentLocation={this.state.currentLocation} stations={this.state.stations} /></Col>
         </Row>
         <LocationDetails show={this.state.showModal} toggle={this.toggle} selected={this.state.selected} />

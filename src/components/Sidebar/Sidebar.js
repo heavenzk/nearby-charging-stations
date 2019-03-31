@@ -10,7 +10,7 @@ class Sidebar extends Component {
 
   render() {
     return (
-      <div className="Sidebar d-none-sm d-md-block">
+      <div className="Sidebar">
         <ChargingLocations stations={this.props.stations} handleClick={this.handleClick}/>
       </div>
     )

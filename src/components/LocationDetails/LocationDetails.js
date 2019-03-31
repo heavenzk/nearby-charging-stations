@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react';
-import { Button, Card, CardBody, CardHeader, CardText, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import React, { Component } from 'react';
+import { Card, CardBody, CardHeader, CardText, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import './LocationDetails.css';
 
 class LocationDetails extends Component {
@@ -35,16 +35,16 @@ class LocationDetails extends Component {
               <CardBody>
                 <CardText>Numbers of stations: {selected.Connections.length}</CardText>
                 {
-                  selected.Connections.map(connection => {
+                  selected.Connections.map((connection, index) => {
                     return (
-                      <Fragment>
+                      <div key={index}>
                         <CardText className="font-weight-bold">{connection.ConnectionType.Title}</CardText>
-                        <div class="d-flex justify-content-between">
+                        <div className="d-flex justify-content-between">
                           <CardText>{connection.Amps}A</CardText>
                           <CardText>{connection.Voltage}V</CardText>
                           <CardText>{connection.CurrentType.Title}</CardText>
                         </div>
-                      </Fragment>
+                      </div>
                     );
                   })
                 }

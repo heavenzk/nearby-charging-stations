@@ -3,3 +3,10 @@
   max-height: calc(100vh - 56px);
   overflow: hidden;
 }
+
+@media only screen and (max-width: 768px) {
+  .Sidebar {
+    height: calc(50vh - 56px);
+    max-height: calc(50vh - 56px);
+  }
+}

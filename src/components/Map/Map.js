@@ -6,7 +6,6 @@ class Map extends Component {
   componentDidMount() {
     // create map
     this.map = L.map('map', {
-      center: [49.8419, 24.0315],
       zoom: 16,
       layers: [
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -15,11 +14,13 @@ class Map extends Component {
       ]
     });
 
+    this.locateUser();
+
+
     this.map.on('click', (data) => {
       this.props.getCurrentLocation({ latitude: data.latlng.lat, longitude: data.latlng.lng });
     });
 
-    this.locateUser();
 
     this.layer = L.layerGroup().addTo(this.map);
     this.updateMarkers(this.props.stations);
