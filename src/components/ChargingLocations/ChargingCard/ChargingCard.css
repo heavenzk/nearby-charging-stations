@@ -1,0 +1,15 @@
+.ChargingCard {
+  margin: 3px 0;
+}
+
+.ChargingCard:hover {
+  cursor: pointer;
+}
+
+.ChargingCard:first-child {
+  margin-top: 0;
+}
+
+.ChargingCard:last-child {
+  margin-bottom: 0;
+}
